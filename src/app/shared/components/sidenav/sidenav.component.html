@@ -1,0 +1,20 @@
+<mat-drawer-container class="sidenav-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <button mat-stroked-button color="basic" routerLink="table-page">
+            <mat-icon class= "buttons">table_rows</mat-icon>
+            tabelas</button>
+          <br>
+          <button mat-stroked-button color="basic" >
+            <mat-icon class= "buttons">local_atm</mat-icon>
+            valores</button>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button type="button" class="sidenavButton" mat-button (click)="drawer.toggle()" (click)="changeIcon(!change)">
+        <mat-icon class="seta" >{{icon}}</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+    
+  
+  </mat-drawer-container>
